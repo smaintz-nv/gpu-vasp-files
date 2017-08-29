@@ -1,0 +1,9 @@
+Automatic mesh
+0
+Monkhorst Pack
+2 2 2   # vasp_kpoints: prec medium=28.0
+0. 0. 0.
+
+### lattice vectors length/angles : 
+# a=10.1713 b=10.1713 c=10.1713
+# alpha=65.2001 beta=65.2001 gamma=65.2001

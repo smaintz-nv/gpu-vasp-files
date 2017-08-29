@@ -1,0 +1,26 @@
+System = Si-big
+
+ Global Settings
+   ISMEAR   = 1      # first order Methfessel-Paxton
+   SIGMA    = 0.2    # broadening (default)
+   LREAL    = A      # evaluate projection operators in real space
+
+ Discretization
+   PREC     = Normal # Normal defaults
+
+ Electronic Relaxation
+   ALGO   = Normal # Use Congugate Gradient to allow HF-calcs
+   NELM   = 40     # maximum number of electronic SC steps
+   EDIFF  = 1E-06  # stopping-criterion for ELM
+
+ Ionic Relaxation
+   NSW    = 0    # maximum number of ionic steps
+   ISIF   = 0    # calculate/relax/change everything
+   IBRION = 2    # ion update algorithm (2 = CG)
+
+ Input/Output
+   ISTART = 0 # Start from scratch
+   LWAVE  = F # Don't store the WAVECAR
+   LCHARG = F # Do store the CHGCAR for band structure calculation
+NCORE = 1
+NSIM = 4

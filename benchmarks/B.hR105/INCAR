@@ -1,0 +1,32 @@
+SYSTEM = B.hR105 with PBE0/HSE06
+
+ Global Settings
+   LHFCALC  = .TRUE. # Use hybrid functionals
+   HFSCREEN = 0.2    # Use HSE06
+   ISMEAR   = 1      # first order Methfessel-Paxton
+   SIGMA    = 0.2    # broadening (default)
+   LREAL    = A      # evaluate projection operators in real space 
+
+ Discretization
+   PREC     = Normal # Normal defaults
+   PRECFOCK = Normal # Normal defaults for HF
+   NKRED    = 1      # Use every k-point in HF
+   NBANDS   = 224    # For consistency; default = 210
+   NSIM     = 4
+
+ Electronic Relaxation
+   ALGO   = Normal # Use Congugate Gradient to allow HF-calcs
+   NELM   = 5      # maximum number of electronic SC steps
+   EDIFF  = 1E-06  # stopping-criterion for ELM
+
+ Ionic Relaxation
+   NSW    = 1    # maximum number of ionic steps 
+   ISIF   = 3    # calculate/relax/change everything
+   IBRION = 2    # ion update algorithm (2 = CG)
+   POTIM  = 0.25 # force scaling constant (think relaxation)
+
+ Input/Output
+   ISTART = 0 # Start from scratch
+   LWAVE  = F # Don't store the WAVECAR
+   LCHARG = F # Don't store the CHGCAR
+
